@@ -1,0 +1,11 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/Basketball/basketball-texture.jpg" type="Texture" id=1]
+
+[resource]
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.6
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.3
+uv1_scale = Vector3( 0.01, 0.01, 0.01 )
+uv1_triplanar = true

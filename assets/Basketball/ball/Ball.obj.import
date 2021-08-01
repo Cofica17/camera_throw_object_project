@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Ball.obj-f3f3a9767535e5f24fbc8806f1f2635c.mesh"
+
+[deps]
+
+files=[ "res://.import/Ball.obj-f3f3a9767535e5f24fbc8806f1f2635c.mesh" ]
+
+source_file="res://assets/Basketball/ball/Ball.obj"
+dest_files=[ "res://.import/Ball.obj-f3f3a9767535e5f24fbc8806f1f2635c.mesh", "res://.import/Ball.obj-f3f3a9767535e5f24fbc8806f1f2635c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

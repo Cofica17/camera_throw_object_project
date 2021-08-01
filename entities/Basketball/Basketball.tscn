@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Basketball/ball/Ball.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/Basketball/Room_02.tres" type="Material" id=2]
+[ext_resource path="res://assets/Basketball/Room_01.tres" type="Material" id=3]
+[ext_resource path="res://entities/Basketball/Basketball.gd" type="Script" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 0.6
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.490451
+
+[node name="Basketball" type="RigidBody"]
+mass = 2.04082
+physics_material_override = SubResource( 1 )
+can_sleep = false
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 2 )
