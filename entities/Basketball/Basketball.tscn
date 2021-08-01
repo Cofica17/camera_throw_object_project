@@ -12,7 +12,7 @@ bounce = 0.6
 radius = 0.490451
 
 [node name="Basketball" type="RigidBody"]
-mass = 2.04082
+mass = 4.08163
 physics_material_override = SubResource( 1 )
 can_sleep = false
 script = ExtResource( 4 )

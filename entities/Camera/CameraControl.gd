@@ -104,7 +104,7 @@ func _input(event):
 		rotate_pivot = null
 		rotate_camera = false
 	
-	if Input.is_action_pressed("camera_move"):
+	if Input.is_action_pressed("camera_move") and not _mouse_outside_screen():
 		can_camera_move = true
 		if event is InputEventMouseMotion:
 			var new_vec = Vector2(
@@ -114,8 +114,8 @@ func _input(event):
 			
 			transform.origin.x += new_vec.x
 			transform.origin.z += new_vec.y
-		
-	if Input.is_action_just_released("camera_move"):
+	
+	if Input.is_action_just_released("camera_move") or _mouse_outside_screen():
 		can_camera_move = false
 	
 	if Input.is_action_pressed("pick_up"):
@@ -206,3 +206,10 @@ func _update_rotation(delta):
 
 func set_smoothness(value):
 	smoothness = clamp(value, 0.001, 0.999)
+
+
+func _mouse_outside_screen() -> bool:
+	var s = get_viewport().size
+	var mos_pos = get_viewport().get_mouse_position()
+	
+	return mos_pos.x > s.x or mos_pos.x < 0 or mos_pos.y > s.y or mos_pos.y < 0
